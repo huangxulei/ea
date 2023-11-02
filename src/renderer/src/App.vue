@@ -1,13 +1,9 @@
 <script setup>
-
+import TomatoCard from "./components/tomato-card/tomato-card.vue";
 </script>
 
 <template>
-  <div>
-    <el-button>按钮</el-button>
-  </div>
+  <tomato-card :rest="data.rest" :alarm="data.alarm" @newRecord="handelNewRecord"></tomato-card>
 </template>
 
-<style lang="less">
-@import './assets/css/styles.less';
-</style>
+<style lang="less"></style>

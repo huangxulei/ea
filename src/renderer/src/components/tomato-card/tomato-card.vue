@@ -17,12 +17,30 @@ let Pause;
 
 </script>
 <template>
-    <el-dialog
-        v-model="dialogVisible" title="Tips" width="30%">
+    <el-dialog v-model="dialogVisible"
+        title="Tips" width="30%">
         <span>{{ playerText }}</span>
-        <template>
-
+        <template #footer>
+            <span class="dialog-footer">
+                <el-button type="primary" @click="Pause">
+                    确认
+                </el-button>
+            </span>
         </template>
     </el-dialog>
+    <div class="tomato-card card">
+        <div class="header">
+            <el-icon>
+                <Timer />
+            </el-icon>
+            <span>{{ title }}</span>
+        </div>
+    </div>
 </template>
-<style scoped></style>
+<style scoped lang="scss">
+.tomato-card {
+    .tip {
+        color: gray;
+    }
+}
+</style>
