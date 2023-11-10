@@ -24,3 +24,15 @@ function setRecord(data, y, m, d, record) {
   curr.count ++;
   curr.data.push(record);
 }
+
+//获得y/m/d当天的统计数据
+function getDataByYMD(data, y, m, d) {
+  const record = data.record;
+  if (record[y] !== undefined && record[y][m] !== undefined && record[y][m][d] !== undefined) {
+    return [record[y][m][d].sum, record[y][m][d].count];
+  }
+  return [0, 0];
+}
+
+
+export {setRecord, getDataByYMD};

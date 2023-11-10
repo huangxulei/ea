@@ -9,5 +9,10 @@ declare module 'vue' {
   export interface GlobalComponents {
     DataPane: typeof import('./src/components/data-pane/data-pane.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElContainer: typeof import('element-plus/es')['ElContainer']
+    ElDialog: typeof import('element-plus/es')['ElDialog']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElMain: typeof import('element-plus/es')['ElMain']
+    TomatoCard: typeof import('./src/components/tomato-card/tomato-card.vue')['default']
   }
 }
