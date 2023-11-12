@@ -1,4 +1,5 @@
 <script setup>
+import InputNumber from "./components/inputNumber.vue";
 import { ref } from "vue";
 import { Timer } from "@element-plus/icons-vue";
 import musicList from './../../utils/musicList'
@@ -51,7 +52,7 @@ function play(music, text) {
         </div>
         <div v-if="state === 'ready'">
             <div class="NumberSelector">
-                <input-number :num="num" :min="25" :max="max" suffix="分钟" :step="5"></input-number>
+                <input-number v-model:num="num" :min="25" :max="max" suffix="分钟" :step="5"></input-number>
             </div>
             <div class="tip" v-if="num < 25">你还没有休息时间</div>
             <div class="tip" v-else> 你将有{{ breakTime }} 分钟的休息时间 </div>

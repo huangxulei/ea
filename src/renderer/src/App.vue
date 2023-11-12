@@ -16,7 +16,7 @@ function handelNewRecord(record) {
     <el-container>
       <el-main class="main">
         <tomato-card :rest="data.rest" :alarm="data.alarm" @newRecord="handelNewRecord"></tomato-card>
-        <tomato-card></tomato-card>
+
       </el-main>
     </el-container>
   </div>
