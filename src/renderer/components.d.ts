@@ -13,6 +13,7 @@ declare module 'vue' {
     ElDialog: typeof import('element-plus/es')['ElDialog']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElMain: typeof import('element-plus/es')['ElMain']
+    InputNumber: typeof import('./src/components/tomato-card/components/inputNumber.vue')['default']
     TomatoCard: typeof import('./src/components/tomato-card/tomato-card.vue')['default']
   }
 }
