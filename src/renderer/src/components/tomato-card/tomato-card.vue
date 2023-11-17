@@ -30,6 +30,15 @@ function play(music, text) {
     }
 }
 
+function readyToWorking() {
+    if (new Date().getHours() >= 22) {
+        ElMessage({ message: "太晚了， 快去休息吧!", type: "warning", title: "注意" });
+    } else {
+        state.value = 'working';
+        title.value = '专注时段';
+    }
+}
+
 </script>
 <template>
     <!-- prompt -->
@@ -61,6 +70,9 @@ function play(music, text) {
                     <div> 启动新一轮番茄时间</div>
                 </el-button>
             </div>
+        </div>
+        <div v-else-if="state === 'working'" class="working">
+            <count-down-timer :time="num" @over="workingToBreak" :end-button="true"></count-down-timer>
         </div>
 
     </div>
