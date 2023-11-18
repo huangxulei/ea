@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    CountDownTimer: typeof import('./src/components/tomato-card/components/countDownTimer.vue')['default']
     DataPane: typeof import('./src/components/data-pane/data-pane.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElContainer: typeof import('element-plus/es')['ElContainer']
